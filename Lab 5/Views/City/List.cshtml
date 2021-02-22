@@ -1,0 +1,11 @@
+﻿@model List<City>
+
+<ul>
+    @foreach (var city in Model)
+    {
+        <li>
+            @city.Id - <a asp-controller="City" asp-action="View" asp-route-id="@city.Id">@city.Name</a>
+            (<a asp-controller="City" asp-action="Edit" asp-route-id="@city.Id">Edit</a>)
+        </li>
+    }
+</ul>
